@@ -6,6 +6,8 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 let excusa = document.getElementById("Excuse");
+let reset_button = document.getElementById("reset_button");
+let generate_button = document.getElementById("generate_button");
 
 function numeroAleatorio(maximo) {
   return Math.floor(Math.random() * maximo);
@@ -47,14 +49,25 @@ function generarExcusaAlAzar() {
   );
 }
 
+function excusaInitial() {
+  excusa.innerHTML = "Haz click para generar una excusa";
+}
+
 excusa.onclick = function() {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 50; i++) {
     setTimeout(function() {
       excusa.innerHTML = generarExcusaAlAzar();
     }, i * i);
   }
 };
 
+reset_button.onclick = function() {
+  excusaInitial();
+};
+generate_button.onclick = function() {
+  excusa.innerHTML = generarExcusaAlAzar();
+};
+
 window.onload = function() {
-  excusa.innerHTML = "Haz click para generar una excusa";
+  excusaInitial();
 };
