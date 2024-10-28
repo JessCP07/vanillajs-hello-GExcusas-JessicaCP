@@ -24,14 +24,7 @@ function generarExcusaAlAzar() {
   let who = ["The Dog", "my granma", " The Mailman", "My Bird"];
   let action = ["Ate", "Peed", "Crushed", "Broke"];
   let what = ["My Home Work ", "My Phone", "The Car"];
-
-  let when = [
-    "Before The Class",
-    "When I was Sleeping",
-    "While i Was Exercising",
-    "During My Lunch",
-    "While i was praying"
-  ];
+  let when = ["Before The Class", "When I was Sleeping","While i Was Exercising","During My Lunch", "While i was praying"];
 
   let whoAleatorio = escogerUnElementoAlAzar(who);
   let whenAleatorio = escogerUnElementoAlAzar(when);
